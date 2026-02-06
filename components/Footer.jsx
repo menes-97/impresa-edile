@@ -48,7 +48,7 @@ export default function Footer() {
         color: '#9ca3af',
         fontSize: '0.85rem',
       }}>
-        <p>&copy; 2025 S&S Impresa Edile. Tutti i diritti riservati.</p>
+        <p>&copy; 2026 S&S Impresa Edile. Tutti i diritti riservati.</p>
         <p style={{ marginTop: '0.5rem', fontSize: '0.8rem' }}>
           Sito web realizzato da{' '}
           <a

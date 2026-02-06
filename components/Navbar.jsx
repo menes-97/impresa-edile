@@ -1,11 +1,20 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       {/* Logo / Name */}
       <a href="#" className="navbar-logo">
         <img
@@ -16,7 +25,7 @@ export default function Navbar() {
         <span>S&S <span style={{ color: '#dc2626' }}>IMPRESA EDILE</span></span>
       </a>
 
-      {/* Burger Button (nur auf Handy sichtbar) */}
+      {/* Burger Button */}
       <button
         className="burger"
         onClick={() => setMenuOpen(!menuOpen)}

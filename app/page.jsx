@@ -5,98 +5,52 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <section
-        style={{
-          backgroundImage: 'url(/images/hero.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '100vh',
-          width: '100%',
-          position: 'relative',
-        }}
+        className="hero"
+        style={{ backgroundImage: 'url(/images/hero.jpg)' }}
       >
-        {/* Dark Overlay */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          }}
-        />
-
-        {/* Content */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            textAlign: 'center',
-            color: 'white',
-            padding: '20px',
-          }}
-        >
-          <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem' }}>
+        <div className="hero-overlay" />
+        <div className="hero-content">
+          <h1 className="hero-title animate-fade-in-up">
             S&S IMPRESA EDILE
           </h1>
-          <p style={{ fontSize: '1.25rem', marginBottom: '2rem', maxWidth: '600px' }}>
-            Costruzioni e ristrutturazioni di qualità in Treviso e provincia
+          <p className="hero-subtitle animate-fade-in-up delay-2">
+            Costruzioni e ristrutturazioni di qualit&agrave; in Treviso e provincia
           </p>
-          <a
-            href="#contatti"
-            style={{
-              backgroundColor: '#dc2626',
-              color: 'white',
-              fontWeight: 'bold',
-              padding: '1rem 2rem',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              fontSize: '1.1rem',
-            }}
-          >
+          <a href="#contatti" className="hero-btn animate-fade-in-up delay-4">
             Richiedi un Preventivo
           </a>
         </div>
       </section>
 
       {/* Servizi Section */}
-      <section id="servizi" style={{ padding: '80px 20px', backgroundColor: '#ffffff' }}>
+      <section id="servizi" className="servizi-section">
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '3rem', color: '#111' }}>
+          <h2 className="section-title" style={{ color: '#111' }}>
             I Nostri Servizi
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-            {/* Servizio 1 */}
-            <div style={{ backgroundColor: '#f3f4f6', padding: '2rem', borderRadius: '8px', textAlign: 'center' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🏠</div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.75rem', color: '#111' }}>Ristrutturazioni</h3>
-              <p style={{ color: '#666' }}>
-                Ristrutturazione completa di appartamenti e case
+          <div className="section-divider" />
+          <div className="servizi-grid">
+            <div className="servizio-card animate-fade-in-up delay-1">
+              <span className="servizio-icon">🏠</span>
+              <h3 className="servizio-title">Ristrutturazioni</h3>
+              <p className="servizio-desc">
+                Ristrutturazione completa di appartamenti e case con materiali di prima qualit&agrave;
               </p>
             </div>
 
-            {/* Servizio 2 */}
-            <div style={{ backgroundColor: '#f3f4f6', padding: '2rem', borderRadius: '8px', textAlign: 'center' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🏗️</div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.75rem', color: '#111' }}>Costruzioni</h3>
-              <p style={{ color: '#666' }}>
-                Nuove costruzioni residenziali e commerciali
+            <div className="servizio-card animate-fade-in-up delay-3">
+              <span className="servizio-icon">🏗️</span>
+              <h3 className="servizio-title">Costruzioni</h3>
+              <p className="servizio-desc">
+                Nuove costruzioni residenziali e commerciali chiavi in mano
               </p>
             </div>
 
-            {/* Servizio 3 */}
-            <div style={{ backgroundColor: '#f3f4f6', padding: '2rem', borderRadius: '8px', textAlign: 'center' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔧</div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.75rem', color: '#111' }}>Manutenzione</h3>
-              <p style={{ color: '#666' }}>
-                Riparazioni tetti, facciate e impianti
+            <div className="servizio-card animate-fade-in-up delay-5">
+              <span className="servizio-icon">🔧</span>
+              <h3 className="servizio-title">Manutenzione</h3>
+              <p className="servizio-desc">
+                Riparazioni tetti, facciate e impianti con interventi rapidi e professionali
               </p>
             </div>
           </div>
@@ -104,238 +58,99 @@ export default function Home() {
       </section>
 
       {/* Parallax Section */}
-      <section style={{
-        backgroundImage: 'url(/images/parallax.jpg)',
-        backgroundAttachment: 'fixed',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        position: 'relative',
-        padding: '120px 20px',
-        minHeight: '400px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
-        {/* Dark Overlay */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.6)',
-        }} />
-
-        {/* Content */}
-        <div style={{
-          position: 'relative',
-          zIndex: 1,
-          textAlign: 'center',
-          color: 'white',
-          maxWidth: '800px',
-        }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: 'bold',
-            marginBottom: '1.5rem',
-            lineHeight: '1.3',
-          }}>
+      <section
+        className="parallax-section"
+        style={{ backgroundImage: 'url(/images/parallax.jpg)' }}
+      >
+        <div className="parallax-overlay" />
+        <div className="parallax-content">
+          <h2 className="parallax-title">
             Costruiamo il tuo futuro, mattone dopo mattone
           </h2>
-          <p style={{
-            fontSize: '1.2rem',
-            lineHeight: '1.8',
-            color: '#d1d5db',
-            marginBottom: '2rem',
-          }}>
+          <p className="parallax-text">
             Con anni di esperienza nel settore edile, realizziamo progetti
-            di qualità con passione e professionalità. Dalla ristrutturazione alla
-            nuova costruzione, il nostro team è al tuo fianco in ogni fase del lavoro.
+            di qualit&agrave; con passione e professionalit&agrave;. Dalla ristrutturazione alla
+            nuova costruzione, il nostro team &egrave; al tuo fianco in ogni fase del lavoro.
           </p>
-          <div style={{
-            width: '80px',
-            height: '4px',
-            backgroundColor: '#dc2626',
-            margin: '0 auto',
-            borderRadius: '2px',
-          }} />
+          <div className="parallax-line" />
         </div>
       </section>
 
       {/* Progetti Section */}
-      <section id="progetti" style={{ padding: '80px 20px', backgroundColor: '#1f2937' }}>
+      <section id="progetti" className="progetti-section">
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '3rem', color: '#fff' }}>
+          <h2 className="section-title" style={{ color: '#fff' }}>
             I Nostri Lavori
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
-            <div style={{ height: '250px', borderRadius: '8px', overflow: 'hidden' }}>
-              <img
-                src="/images/progetto1.jpg"
-                alt="Progetto 1"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
-            <div style={{ height: '250px', borderRadius: '8px', overflow: 'hidden' }}>
-              <img
-                src="/images/progetto2.jpg"
-                alt="Progetto 2"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
-            <div style={{ height: '250px', borderRadius: '8px', overflow: 'hidden' }}>
-              <img
-                src="/images/progetto3.jpg"
-                alt="Progetto 3"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
-            <div style={{ height: '250px', borderRadius: '8px', overflow: 'hidden' }}>
-              <img
-                src="/images/progetto4.jpg"
-                alt="Progetto 4"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
-            <div style={{ height: '250px', borderRadius: '8px', overflow: 'hidden' }}>
-              <img
-                src="/images/progetto5.jpg"
-                alt="Pavimentazione esterna"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
-            <div style={{ height: '250px', borderRadius: '8px', overflow: 'hidden' }}>
-              <img
-                src="/images/progetto6.jpg"
-                alt="Barriere stradali"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
-            <div style={{ height: '250px', borderRadius: '8px', overflow: 'hidden' }}>
-              <img
-                src="/images/progetto7.jpg"
-                alt="Scavi e canalizzazioni"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
-            <div style={{ height: '250px', borderRadius: '8px', overflow: 'hidden' }}>
-              <img
-                src="/images/progetto8.jpg"
-                alt="Cantiere stradale"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
+          <div className="section-divider" />
+          <div className="progetti-grid">
+            {[
+              { src: '/images/progetto1.jpg', alt: 'Ristrutturazione completa' },
+              { src: '/images/progetto2.jpg', alt: 'Nuova costruzione' },
+              { src: '/images/progetto3.jpg', alt: 'Lavori edili' },
+              { src: '/images/progetto4.jpg', alt: 'Progetto residenziale' },
+              { src: '/images/progetto5.jpg', alt: 'Pavimentazione esterna' },
+              { src: '/images/progetto6.jpg', alt: 'Barriere stradali' },
+              { src: '/images/progetto7.jpg', alt: 'Scavi e canalizzazioni' },
+              { src: '/images/progetto8.jpg', alt: 'Cantiere stradale' },
+            ].map((progetto, i) => (
+              <div key={i} className={`progetto-card animate-scale-in delay-${i + 1}`}>
+                <img src={progetto.src} alt={progetto.alt} />
+                <div className="progetto-overlay">
+                  <span className="progetto-overlay-text">{progetto.alt}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Contatti Section */}
-      <section id="contatti" style={{ padding: '80px 20px', backgroundColor: '#f9fafb' }}>
+      <section id="contatti" className="contatti-section">
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: 'bold',
-            textAlign: 'center',
-            marginBottom: '0.75rem',
-            color: '#111',
-          }}>
+          <h2 className="section-title" style={{ color: '#111' }}>
             Contattaci
           </h2>
           <p style={{
             textAlign: 'center',
             color: '#666',
-            marginBottom: '3rem',
+            marginBottom: '1rem',
             fontSize: '1.1rem',
           }}>
             Richiedi un preventivo gratuito o contattaci per qualsiasi informazione
           </p>
+          <div className="section-divider" />
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '3rem',
-          }}>
+          <div className="contatti-grid">
             {/* Info */}
             <div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontWeight: 'bold',
-                marginBottom: '2rem',
-                color: '#111',
-              }}>
-                S&S Impresa Edile
-              </h3>
+              <h3 className="contatti-info-title">S&S Impresa Edile</h3>
 
-              {/* Telefon 1 */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem',
-                marginBottom: '1.25rem',
-                padding: '1rem',
-                backgroundColor: 'white',
-                borderRadius: '10px',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-              }}>
-                <div style={{
-                  backgroundColor: '#fef2f2',
-                  padding: '0.75rem',
-                  borderRadius: '10px',
-                  fontSize: '1.5rem',
-                }}>📞</div>
+              <div className="contatti-item">
+                <div className="contatti-item-icon">📞</div>
                 <div>
-                  <p style={{ fontSize: '0.8rem', color: '#999', marginBottom: '2px' }}>Telefono 1</p>
-                  <a href="tel:+393884293583" style={{ color: '#111', textDecoration: 'none', fontWeight: '600', fontSize: '1.05rem' }}>
+                  <p className="contatti-item-label">Telefono</p>
+                  <a href="tel:+393884293583" className="contatti-item-value">
                     +39 388 429 3583
                   </a>
                 </div>
               </div>
 
-              {/* Email */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem',
-                marginBottom: '1.25rem',
-                padding: '1rem',
-                backgroundColor: 'white',
-                borderRadius: '10px',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-              }}>
-                <div style={{
-                  backgroundColor: '#fef2f2',
-                  padding: '0.75rem',
-                  borderRadius: '10px',
-                  fontSize: '1.5rem',
-                }}>✉️</div>
+              <div className="contatti-item">
+                <div className="contatti-item-icon">✉️</div>
                 <div>
-                  <p style={{ fontSize: '0.8rem', color: '#999', marginBottom: '2px' }}>Email</p>
-                  <a href="mailto:selminshakiroski@icloud.com" style={{ color: '#111', textDecoration: 'none', fontWeight: '600', fontSize: '0.95rem' }}>
+                  <p className="contatti-item-label">Email</p>
+                  <a href="mailto:selminshakiroski@icloud.com" className="contatti-item-value" style={{ fontSize: '0.95rem' }}>
                     selminshakiroski@icloud.com
                   </a>
                 </div>
               </div>
 
-              {/* P.IVA */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem',
-                padding: '1rem',
-                backgroundColor: 'white',
-                borderRadius: '10px',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-              }}>
-                <div style={{
-                  backgroundColor: '#fef2f2',
-                  padding: '0.75rem',
-                  borderRadius: '10px',
-                  fontSize: '1.5rem',
-                }}>📄</div>
+              <div className="contatti-item">
+                <div className="contatti-item-icon">📄</div>
                 <div>
-                  <p style={{ fontSize: '0.8rem', color: '#999', marginBottom: '2px' }}>Partita IVA</p>
-                  <p style={{ color: '#111', fontWeight: '600', fontSize: '1.05rem' }}>05470940262</p>
+                  <p className="contatti-item-label">Partita IVA</p>
+                  <p className="contatti-item-value" style={{ cursor: 'default' }}>05470940262</p>
                 </div>
               </div>
             </div>
@@ -347,61 +162,22 @@ export default function Home() {
       </section>
 
       {/* Parallax Section 2 */}
-      <section style={{
-        backgroundImage: 'url(/images/parallax2.jpg)',
-        backgroundAttachment: 'fixed',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        position: 'relative',
-        padding: '100px 20px',
-        minHeight: '350px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.55)',
-        }} />
-
-        <div style={{
-          position: 'relative',
-          zIndex: 1,
-          textAlign: 'center',
-          color: 'white',
-          maxWidth: '700px',
-        }}>
-          <h2 style={{
-            fontSize: '2.2rem',
-            fontWeight: 'bold',
-            marginBottom: '1.25rem',
-            lineHeight: '1.3',
-          }}>
+      <section
+        className="parallax-section"
+        style={{ backgroundImage: 'url(/images/parallax2.jpg)', padding: '100px 20px', minHeight: '350px' }}
+      >
+        <div className="parallax-overlay" />
+        <div className="parallax-content" style={{ maxWidth: '700px' }}>
+          <h2 className="parallax-title" style={{ fontSize: '2.2rem' }}>
             Il tuo progetto, la nostra passione
           </h2>
-          <p style={{
-            fontSize: '1.15rem',
-            lineHeight: '1.8',
-            color: '#d1d5db',
-          }}>
-            Ogni cantiere è una sfida che affrontiamo con dedizione e competenza.
-            Contattaci oggi per trasformare la tua idea in realtà.
+          <p className="parallax-text">
+            Ogni cantiere &egrave; una sfida che affrontiamo con dedizione e competenza.
+            Contattaci oggi per trasformare la tua idea in realt&agrave;.
           </p>
-          <div style={{
-            width: '80px',
-            height: '4px',
-            backgroundColor: '#dc2626',
-            margin: '2rem auto 0',
-            borderRadius: '2px',
-          }} />
+          <div className="parallax-line" style={{ marginTop: '2rem' }} />
         </div>
       </section>
-
     </main>
   )
 }
