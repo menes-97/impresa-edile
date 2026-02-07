@@ -38,6 +38,9 @@ export const metadata = {
       },
     ],
   },
+  verification: {
+    google: "BihEeHqvCVYaXc3UpjYxDlWgWv8VzJC2lTnHmkEVRSQ",
+  },
   robots: {
     index: true,
     follow: true,
